@@ -17,15 +17,26 @@ function myFunction() {
     var Normal_Hours = Number(String3);
 
     var String4 = input4.value;
-    var Overtime_Hours = Number(String4);
+    var Hours_Worked = Number(String4);
+    
 
     a = Normal_Pay;
     b = Overtime_Pay;
     c = Normal_Hours;
-    d = Overtime_Hours;
+    d = Hours_Worked;
     var m;
-   
-    m = a * c + b * d;
 
-    alert(m);
+    if (d > c) {
+        m = ((d - c) * b) + (c *a)
+    } else {
+        m = a * d
+    }
+
+    
+
+    
+
+
+    var p1 = document.getElementById("p1");
+    p1.innerHTML = "Earned Wage: " + m;
 }
